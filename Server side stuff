@@ -1,1 +1,33 @@
+String lines[] = loadStrings("http://weller.mit.edu/imel/abhinav/api0.php?servo1=30&servo2=40&servo3=50&servo4=60&servo5=70");
 
+//reading pulled values as string
+String a = lines[0];
+String b = lines[1];
+String c = lines[2];
+String d = lines[3];
+String e = lines[4];
+
+//Converting pulled values to int
+Integer servo1 = Integer.parseInt(a.replaceAll("\\s",""));
+Integer servo2 = Integer.parseInt(b.replaceAll("\\s",""));
+Integer servo3 = Integer.parseInt(c.replaceAll("\\s",""));
+Integer servo4 = Integer.parseInt(d.replaceAll("\\s",""));
+Integer extra = Integer.parseInt(e.replaceAll("\\s",""));
+
+//complicated if str for servo control
+
+//printing pulled nt values
+println(servo1);
+println(servo2);
+println(servo3);
+println(servo4);
+println(extra);
+
+
+println();
+
+
+//printing string values
+for (int i = 0 ; i < lines.length; i++) {
+  println(lines[i]);
+}
